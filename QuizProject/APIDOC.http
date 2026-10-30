@@ -1,0 +1,34 @@
+#API for QuizQuestionView
+###
+GET http://127.0.0.1:8000/quiz/questions/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/quiz/answer/
+Content-Type: application/json
+
+{
+    "question_id" : 1,
+    "answer" : "Python"
+}
+
+###
+POST http://127.0.0.1:8000/quiz/result/
+Content-Type: application/json
+
+{
+    "answers": [
+        {
+            "question_id": 1,
+            "answer": "Python"
+        },
+        {
+            "question_id": 2,
+            "answer": "List"
+        },
+        {
+            "question_id": 3,
+            "answer": "GET"
+        }
+    ]
+}
